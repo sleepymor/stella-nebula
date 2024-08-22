@@ -1,53 +1,35 @@
 <script setup>
-// import { RouterLink, RouterView } from 'vue-router'
-// import HelloWorld from './components/HelloWorld.vue'
-
-</script>
-
-<script>
-
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div class="relative h-screen w-full bg-black overflow-hidden">
-    <div id="particles-js" class="w-full h-full"></div>
-    <div class="absolute inset-0 flex flex-col items-center justify-center">
-      <h1 class="text-white md:text-4xl text-2xl">Searching for the Stars<span id="dots"></span></h1> <br>
-      <h1 class="text-white md:text-xl text-center">“Our explorer hasn’t discovered any stars yet. Please wait a moment.”</h1>
+  <div class="min-h-screen flex flex-col">
+    <nav class="absolute inset-0 w-3/4 md:w-1/3 mt-10 mx-auto border rounded-xl border-white h-fit text-center md:text-3xl p-5 z-10">
+      <RouterLink to="/showcase">Showcase</RouterLink>
+      <RouterLink class="mx-8" to="/">Home</RouterLink>
+      <RouterLink to="/schedule">Schedule</RouterLink>
+    </nav>
+    
+    <div id="particles-js" class="flex-grow relative">
+      <RouterView />
     </div>
   </div>
-  <!-- <RouterView /> -->
 </template>
 
 <style>
-/* #dots {
-  display: inline-block;
-  width: 1.5em; 
-  text-align: left;
+#particles-js {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-} */
-
-@keyframes dotCycle {
-  0% {
-    content: "";
-  }
-  25% {
-    content: ".";
-  }
-  50% {
-    content: "..";
-  }
-  75% {
-    content: "...";
-  }
-  100% {
-    content: "";
-  }
 }
 
-#dots::after {
-  content: "";
-  animation: dotCycle 1.5s steps(4, end) infinite;
+canvas {
+  display: block;
+  vertical-align: bottom;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 </style>
-
