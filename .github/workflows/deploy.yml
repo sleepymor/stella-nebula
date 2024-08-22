@@ -29,9 +29,9 @@ jobs:
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "github-actions"
-          git clone --branch gh-pages https://github.com/${{ github.repository }} gh-pages
-          cp -r build/* gh-pages/
-          cd gh-pages
+          git clone --branch main https://github.com/${{ github.repository }} main
+          cp -r build/* main/
+          cd main
           git add .
           git commit -m "Deploy to GitHub Pages"
           git push https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }} gh-pages
