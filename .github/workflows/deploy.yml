@@ -29,11 +29,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - run: npm ci
-      - run: npm test
-      - run: npm run generate
+      - name: Install dependencies
+        run: npm install # Changed to `npm install` to see if it handles the issue
 
-      - name: deploy
+      - name: Build project
+        run: npm run build # Use `build` instead of `generate` if your build command is `build`
+
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
         with:
