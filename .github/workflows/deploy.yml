@@ -34,4 +34,4 @@ jobs:
           cd main
           git add .
           git commit -m "Deploy to GitHub Pages"
-          git push https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }} gh-pages
+          git push https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }} main
