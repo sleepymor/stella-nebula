@@ -10,10 +10,10 @@
 
 <template>
   <div class="relative h-screen w-full bg-black overflow-hidden">
-    <div id="particles-js"></div>
+    <div id="particles-js" class="w-full h-full"></div>
     <div class="absolute inset-0 flex flex-col items-center justify-center">
-      <h1 class="text-white text-4xl">Searching for the Stars<span id="dots"></span></h1> <br>
-      <h1 class="text-white text-xl">“Our explorer hasn’t discovered any stars yet. Please wait a moment.”</h1>
+      <h1 class="text-white md:text-4xl text-2xl">Searching for the Stars<span id="dots"></span></h1> <br>
+      <h1 class="text-white md:text-xl text-center">“Our explorer hasn’t discovered any stars yet. Please wait a moment.”</h1>
     </div>
   </div>
   <!-- <RouterView /> -->
