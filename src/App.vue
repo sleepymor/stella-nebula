@@ -11,8 +11,8 @@ import { RouterLink, RouterView } from 'vue-router'
     </nav>
     
     <div id="particles-js" class="flex-grow relative">
-      <RouterView />
     </div>
+    <RouterView />
   </div>
 </template>
 
