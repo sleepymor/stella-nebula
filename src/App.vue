@@ -5,15 +5,15 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <div class="min-h-screen flex flex-col">
     <nav class="absolute inset-0 w-3/4 md:w-1/3 mt-10 mx-auto border rounded-xl border-white font-thin h-fit text-center text-xs md:text-2xl p-5 z-10 text-neoncyan-light">
-  <RouterLink 
+  <!-- <RouterLink 
     to="/aku"
     class=" hover:text-3xl hover:text-neonpurple-light mx-8"
     :class="{ 'text-neonpurple-soft font-thin md:text-3xl': $route.path === '/aku', 'text-neoncyan-light': $route.path !== '/showcase' }">
     AKU
-  </RouterLink>
+  </RouterLink> -->
   <RouterLink 
     to="/showcase"
-    class=" hover:text-3xl hover:text-neonpurple-light"
+    class=" md:hover:text-3xl hover:text-neonpurple-light"
     :class="{ 'text-neonpurple-soft font-thin md:text-3xl': $route.path === '/showcase', 'text-neoncyan-light': $route.path !== '/showcase' }">
     Showcase
   </RouterLink>
@@ -25,16 +25,16 @@ import { RouterLink, RouterView } from 'vue-router'
   </RouterLink>
   <RouterLink 
     to="/schedule"
-    class=" hover:text-3xl hover:text-neonpurple-light"
+    class=" md:hover:text-3xl hover:text-neonpurple-light"
     :class="{ 'text-neonpurple-soft font-thin md:text-3xl': $route.path === '/schedule', 'text-neoncyan-light': $route.path !== '/schedule' }">
     Schedule
   </RouterLink>
-  <RouterLink 
+  <!-- <RouterLink 
     to="/srk"
     class=" hover:text-3xl hover:text-neonpurple-light mx-8"
     :class="{ 'text-neonpurple-soft font-thin md:text-3xl': $route.path === '/srk', 'text-neoncyan-light': $route.path !== '/schedule' }">
     SRK
-  </RouterLink>
+  </RouterLink> -->
 </nav>
 
     
@@ -53,7 +53,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 canvas {
   display: block;
-  vertical-align: bottom;
+  /* vertical-align: bottom; */
   position: absolute;
   top: 0;
   left: 0;
