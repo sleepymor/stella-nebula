@@ -19,7 +19,7 @@ import { RouterLink, RouterView } from 'vue-router'
   </RouterLink>
   <RouterLink 
     to="/" 
-    class="mx-8 hover:text-3xl hover:text-neonpurple-light"
+    class="mx-8 md:hover:text-3xl hover:text-neonpurple-light"
     :class="{ 'text-neonpurple-soft font-thin md:text-3xl': $route.path === '/', 'text-neoncyan-light': $route.path !== '/' }">
     Home
   </RouterLink>
